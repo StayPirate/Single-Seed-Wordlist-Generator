@@ -1,0 +1,117 @@
+#### Substitution Table ###
+# a	sa@	sa4		
+# c	sc<	sc(		
+# e	se3	se&	se€	
+# g	sg6			
+# h	sh#	sh4		
+# i	si1	si!	si|	
+# l	sl1	sl!	sl|	
+# o	so0			
+# q	sq9			
+# r	sr4			
+# s	ss5	ss$		
+# t	st7			
+# x	sx%			
+# z	sz2	sz7		
+# 0	s0o			
+# 1	s1i	s1l	s1I	
+# 2	s2z	s2Z		
+# 3	s3e	s3E		
+# 4	s4h	s4a	s4A	s4H
+# 5	s5s	s5S		
+# 6	s6b	s6G		
+# 7	s7T	s7j		
+# 8	s8B	s8X	s8x	
+# 9	s9g	s9q	s9J	
+# A	sA4	sA@		
+# B	sB8			
+# C	sC(	sC<		
+# E	sE3	sE&	sE€	
+# G	sG6			
+# H	sH4	sH#		
+# I	sI1	sI!	sI|	
+# L	sL1			
+# O	sO0			
+# Q	sQ0			
+# R	sR4			
+# S	sS5	sS$		
+# T	sT7	sT+		
+# X	sX%			
+#Z	sZ2	sZ5	sZ7	
+###########################
+
+:
+
+sa@
+sa4
+sc<
+sc(
+se3
+se&
+sg6
+sh#
+sh4
+si1
+si!
+si|
+sl1
+sl!
+sl|
+so0
+sq9
+sr4
+ss5
+ss$
+st7
+sx%
+sz2
+sz7
+s0o
+s1i
+s1l
+s1I
+s2z
+s2Z
+s3e
+s3E
+s4h
+s4a
+s4A
+s4H
+s5s
+s5S
+s6b
+s6G
+s7T
+s7j
+s8B
+s8X
+s8x
+s9g
+s9q
+s9J
+sA4
+sA@
+sB8
+sC(
+sC<
+sE3
+sE&
+sG6
+sH4
+sH#
+sI1
+sI!
+sI|
+sL1
+sO0
+sQ0
+sR4
+sS5
+sS$
+sT7
+sT+
+sX%
+sZ2
+sZ5
+sZ7

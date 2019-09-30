@@ -1,0 +1,114 @@
+#### Substitution Table ###
+# a	sa@	
+# c	sc<	sc(
+# e	se3	se&
+# i	si1	si!
+# l	sl1	sl!
+# o	so0	
+# s	ss5	ss$
+# t	st7	
+# x	sx%	
+###########################
+
+:
+
+sa@
+sc<
+se3
+si1
+sl1
+so0
+ss5
+st7
+sx%
+sc(
+se&
+si!
+sl!
+ss$
+sa@ sc<
+sa@ se3
+sa@ si1
+sa@ sl1
+sa@ so0
+sa@ ss5
+sa@ st7
+sa@ sx%
+sa@ sc(
+sa@ se&
+sa@ si!
+sa@ sl!
+sa@ ss$
+sc< se3
+sc< si1
+sc< sl1
+sc< so0
+sc< ss5
+sc< st7
+sc< sx%
+sc< se&
+sc< si!
+sc< sl!
+sc< ss$
+se3 si1
+se3 sl1
+se3 so0
+se3 ss5
+se3 st7
+se3 sx%
+se3 sc(
+se3 si!
+se3 sl!
+se3 ss$
+si1 sl1
+si1 so0
+si1 ss5
+si1 st7
+si1 sx%
+si1 sc(
+si1 se&
+si1 sl!
+si1 ss$
+sl1 so0
+sl1 ss5
+sl1 st7
+sl1 sx%
+sl1 sc(
+sl1 se&
+sl1 si!
+sl1 ss$
+so0 ss5
+so0 st7
+so0 sx%
+so0 sc(
+so0 se&
+so0 si!
+so0 sl!
+so0 ss$
+ss5 st7
+ss5 sx%
+ss5 sc(
+ss5 se&
+ss5 si!
+ss5 sl!
+st7 sx%
+st7 sc(
+st7 se&
+st7 si!
+st7 sl!
+st7 ss$
+sx% sc(
+sx% se&
+sx% si!
+sx% sl!
+sx% ss$
+sc( se&
+sc( si!
+sc( sl!
+sc( ss$
+se& si!
+se& sl!
+se& ss$
+si! sl!
+si! ss$
+sl! ss$

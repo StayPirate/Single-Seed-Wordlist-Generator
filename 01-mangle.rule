@@ -1,0 +1,11 @@
+:
+
+### Purge all the vowels except a,A
+### --- I use this custom rule since the company name I want to mangle starts with A ---
+@e @i @o @u @E @I @O @U
+
+### Purge all the vowels
+@a @e @i @o @u @A @E @I @O @U
+
+### Only the three first letters
+'3
