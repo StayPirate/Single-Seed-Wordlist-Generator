@@ -14,7 +14,7 @@ Let's pretend we are attempting to crack dumped hashes from a company called "_E
 ```    
 echo example | hashcat -r 01-mangle.rule -r 02-case_toggle.rule -r 03-l33t/l33t_micro_1234.rule -r 04-prefix.rule -r 05-suffix.rule --stdout | sort -u > example_wordlist.txt
 ```
-It generates `example_wordlist.txt` (~100Mb) with **9.6 millions** unique words based on the word _example_. Consider [`rockyou.txt`](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) contains 14.3 millions unique passwords.
+It generates `example_wordlist.txt` (~100Mb) with **12 millions** unique words based on the word _example_. Consider [`rockyou.txt`](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) contains 14.3 millions unique passwords.
 
 ### ⚠️ Beware!
 **Hashcat generates in-memory wordlists**. This means that in order to generate a huge wordlist you need enough free central memory (RAM) to store it during its generation. If hashcat fails, try to use fewer rule-files or rule-files with fewer rules.  
@@ -89,6 +89,20 @@ That's the reason why I named my rule-files with number-prefix, to easily choose
 
 ### Tune for best results
 To achieve the best result I recommend to fork this repo, then tune/customize rule-files according to your seed (the word you are going to use / the company's name). The Hashcat's [official docs](https://hashcat.net/wiki/doku.php?id=rule_based_attack) is a great start point, rules are well documented there and [maskprocessor](https://hashcat.net/wiki/doku.php?id=maskprocessor) is your best friend. Moreover, take a look at comments on rule-files on this repo.
+
+### Trim it!
+If you know what is the password policy for the target company, you can trim all the entry of the generated wordlist you know are not allowed as passwords. It will make your cracking phase faster.  
+For instance, let's pretend we know that the minimum password lenght is 8 chars. We can grep-out all the passwords with less than 8 chars
+```
+grep -E '.{8,}' example_wordlist.txt > example_wordlist_minimum8.txt
+
+wc -l example_wordlist_minimum8.txt
+9680105 example_wordlist_minimum8.txt
+
+wc -l example_wordlist.txt
+12059998 example_wordlist.txt
+```
+In this case, we have trimmed around 2 million entries. In the same way, you can remove passwords that don't contain at least one uppercase letter or a digit, etc.
 
 ### Share your custom rule-files
 If you create some cool rules which increase your successful crack-ratio, please submit it via PR. Thank you!
