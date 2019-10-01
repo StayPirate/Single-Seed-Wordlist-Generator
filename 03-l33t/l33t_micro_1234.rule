@@ -6,32 +6,32 @@ se3
 st7
 sc(
 se&
-sa@,sc<
-sa@,se3
-sa@,st7
-sa@,sc(
-sa@,se&
-sc<,se3
-sc<,st7
-sc<,se&
-se3,st7
-se3,sc(
-st7,sc(
-st7,se&
-sc(,se&
-sa@,sc<,se3
-sa@,sc<,st7
-sa@,sc<,se&
-sa@,se3,st7
-sa@,se3,sc(
-sa@,st7,sc(
-sa@,st7,se&
-sa@,sc(,se&
-sc<,se3,st7
-sc<,st7,se&
-se3,st7,sc(
-st7,sc(,se&
-sa@,sc<,se3,st7
-sa@,sc<,st7,se&
-sa@,se3,st7,sc(
-sa@,st7,sc(,se&
+sa@ sc<
+sa@ se3
+sa@ st7
+sa@ sc(
+sa@ se&
+sc< se3
+sc< st7
+sc< se&
+se3 st7
+se3 sc(
+st7 sc(
+st7 se&
+sc( se&
+sa@ sc< se3
+sa@ sc< st7
+sa@ sc< se&
+sa@ se3 st7
+sa@ se3 sc(
+sa@ st7 sc(
+sa@ st7 se&
+sa@ sc( se&
+sc< se3 st7
+sc< st7 se&
+se3 st7 sc(
+st7 sc( se&
+sa@ sc< se3 st7
+sa@ sc< st7 se&
+sa@ se3 st7 sc(
+sa@ st7 sc( se&
