@@ -4,7 +4,7 @@ Password cracking is one of the most important phases during red team operations
 
 ### Why these rule-files
 In my experience I noticed that many users, especially sysadmins, derive their passwords from the name of the company they work for. Some of these passwords are allowed by the company's password policy since containing numbers, uppercase letters, lowercase letters and are long enough. Unfortunately for them (but not for us) these passwords are easy to bruteforce because are based on a low entropy seed: the name of the company.
-#### Hashcat's rules to the rescue
+### Hashcat's rules to the rescue
 There are currently no tools on internet aimed to generate an exhaustive wordlist starting from a single word. Hence, I thought to use [hashcat](https://hashcat.net/wiki/doku.php?id=hashcat) and [maskprocessor](https://hashcat.net/wiki/doku.php?id=maskprocessor) to achieve this goal. The secret was (again) _divide et impera_. Starting from oclHashcat-plus v0.07 [multiple rule-files](https://hashcat.net/wiki/doku.php?id=rule_based_attack#multi-rules) can be passed to hashcat and these are not executed in a sequence, instead each rule of each rule-file is combined with each rule of each rule-file! In order to bring the output of each rule-file to the hashcat's output (and not only the output of the last rule-file declared in the command-line) I added a simple _do-nothing rule (:)_ as the first rule of each rule-files. In this way, the output of a rule-file which flows as input of the next rule-file will be printed out untouched as part of the second rule-file's output.
 
 ### How to use it
@@ -24,38 +24,38 @@ Read [*Rule-files*](#Rule-files) paragraph below to understand what the rule-fil
 Exploiting my Roman ancestors' [idea](https://en.wikipedia.org/wiki/Divide_and_rule): I created different rule-files, each one with different string manipulation purposes.
 
  * [01-mangle.rule](01-mangle.rule) is used to mangle words. 
-  * Swapping adjacent letters: _examlpe_. (not in the rule-files)
-  * Removing vowels: _xmpl_.
-    > In case the company name starts with a vowel you can add here a rule
+   * Swapping adjacent letters: _examlpe_. (not in the rule-files)
+   * Removing vowels: _xmpl_.
+   > In case the company name starts with a vowel you can add here a rule
       to remove all vowels except for the first letter of the name: **exmpl** instead of **xmpl**.
-  * Keep only the first three letters: _exa_.
+   * Keep only the first three letters: _exa_.
   
  * [02-case_toggle.rule](02-case_toggle.rule) as the name suggests, is used to change the case of letters.
-  * Capitalize the first letter and lower the rest.
-  * Uppercase all letters.
+   * Capitalize the first letter and lower the rest.
+   * Uppercase all letters.
   
  * [03-l33t](03-l33t) This is the most complicated set of rules. Base on how you use it, it can drastically change the size of your wordlist. Check out the README on this folder for a better overview of these rule-files.
  Moreover, on internet I haven't found any good rule-file for l33t encoding. These rule-files can easily be used to l33t-encode any other wordlists, feel free to use them as you prefer.
  
  * [04-prefix.rule](04-prefix.rule) prepends one or more chars to the word.
-  * Prepend a single symbol to the word: _**?**example_.
-  * Prepend one or more digit: _**123**exaple_. (not in the rule-files)
+   * Prepend a single symbol to the word: _**?**example_.
+   * Prepend one or more digit: _**123**exaple_. (not in the rule-files)
   
  * [05-suffix.rule](05-suffix.rule) append one or more chars to the word.
-  * Single digit: _example**1**_.
-  * Double digit: _example**12**_.
-  * Single symbol: _example**?**_.
-  * Single symbol + single digit: _example**?1**_.
-  * Single digit + single symbol: _example**1?**_.
-  * Single symbol + double digit: _example**?11**_.
-  * Double digit + single symbol: _example**12?**_.
-  * Year (1900-2029): _example**2010**_.
-  * Single symbol + year (1900-2029): _example**-2010**_.
+   * Single digit: _example**1**_.
+   * Double digit: _example**12**_.
+   * Single symbol: _example**?**_.
+   * Single symbol + single digit: _example**?1**_.
+   * Single digit + single symbol: _example**1?**_.
+   * Single symbol + double digit: _example**?11**_.
+   * Double digit + single symbol: _example**12?**_.
+   * Year (1900-2029): _example**2010**_.
+   * Single symbol + year (1900-2029): _example**-2010**_.
 
  * [06-case-toggle-multiple-words.rule](06-case-toggle-multiple-words.rule) aka Camel Case.
    > In case the name of the company is composed of more than one word.
   
-  * Lower case the whole line, then upper case the first letter and every letter after a space: _Company Name_.
+   * Lower case the whole line, then upper case the first letter and every letter after a space: _Company Name_.
   
 ### Order matters
 Based on which order you pass the rule-files to the command-line (-r options) you would get different wordlists. Always consider the output of one file-rule will be used as input for the next one, like in a pipeline.  
